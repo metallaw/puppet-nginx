@@ -162,10 +162,7 @@ define nginx::resource::location (
   String $server                                       = undef,
   Optional[String] $www_root                           = undef,
   Optional[String] $autoindex                          = undef,
-  Array $index_files                                   = [
-    'index.html',
-    'index.htm',
-    'index.php'],
+  Array $index_files                                   = undef,
   Optional[String] $proxy                              = undef,
   Optional[String] $proxy_redirect                     = $::nginx::proxy_redirect,
   String $proxy_read_timeout                           = $::nginx::proxy_read_timeout,
